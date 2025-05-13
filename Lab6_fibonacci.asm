@@ -1,4 +1,8 @@
-# Write a program to populate an array with Fibonacci numbers. The Fibonacci sequence begins with 0 and then 1, each following number is the sum of the previous two numbers. Ex: 0, 1, 1, 2, 3, 5, 8, 13. Assume the size of the array is always at least 1. Use the '+' button under the Registers display to store the size of an integer array in $s0 and the address of the first element of the array in the memory in $s1.
+# Write a program to populate an array with Fibonacci numbers. 
+# Ex: 0, 1, 1, 2, 3, 5, 8, 13. 
+# Assume the size of the array is always at least 1.
+# The size of an integer array in $s0 and 
+# the address of the first element of the array in the memory in $s1.
 
 
 
