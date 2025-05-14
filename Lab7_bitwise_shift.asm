@@ -1,6 +1,8 @@
 # Given an integer N stored at memory address 5000, 
 # write a program that stores the result of N x 8 at memory address 5004 
 # and the result of N/16 at memory address 5008.
+# N * 2^i = N << i
+# N / 2^i = N >> i
 
 
 lw $a0, 5000($zero)     # inittialize arg from memory
