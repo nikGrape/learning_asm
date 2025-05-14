@@ -1,7 +1,7 @@
 # Type your code here.
 # Do not initialize register values here.
 
-jal max_of_3 # start procedure mas_of_3
+jal max_of_3 # start procedure max_of_3
 add $s3, $v1, $zero # save returned value to $s3
 j Exit # exit program
 

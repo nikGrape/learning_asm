@@ -32,7 +32,7 @@
 #       return f;
 # }
 
-jal leaf_example        # call the procedure
+jal leaf_example           # call the procedure
 
 
 leaf_example:              # the name of the procedure
@@ -41,24 +41,24 @@ leaf_example:              # the name of the procedure
     sw $t0, 4($sp)         # save register $t0 for use afterwards 
     sw $s0, 0($sp)         # save register $s0 for use afterwards
 
-    add $t0, $a0, $a1     # register $t0 contains g + h
-    add $t1, $a2, $a3     # register $t1 contains i + j
-    sub $s0, $t0, $t1     # f = $t0 - $t1, which is (g + h)-(i + j)
+    add $t0, $a0, $a1      # register $t0 contains g + h
+    add $t1, $a2, $a3      # register $t1 contains i + j
+    sub $s0, $t0, $t1      # f = $t0 - $t1, which is (g + h)-(i + j)
 
     # To return the value of f, we copy it into a return value register:
 
-    add $v0, $s0, $zero   # returns f ($v0 = $s0 + 0)
+    add $v0, $s0, $zero    # returns f ($v0 = $s0 + 0)
 
     # Before returning, we restore the three old values of the registers we saved by "popping" them from the stack:
 
-    lw $s0, 0($sp)        # restore register $s0 for caller
-    lw $t0, 4($sp)        # restore register $t0 for caller
-    lw $t1, 8($sp)        # restore register $t1 for caller
-    addi $sp, $sp, 12     # adjust stack to delete 3 items
+    lw $s0, 0($sp)         # restore register $s0 for caller
+    lw $t0, 4($sp)         # restore register $t0 for caller
+    lw $t1, 8($sp)         # restore register $t1 for caller
+    addi $sp, $sp, 12      # adjust stack to delete 3 items
 
     # The procedure ends with a jump register using the return address:
 
-    jr $ra                # jump back to calling routine
+    jr $ra                 # jump back to calling routine
 
     # ps: we didn't have to save $t registries to the stack
 
